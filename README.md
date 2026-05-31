@@ -8,6 +8,10 @@
 </p>
 
 <p align="center">
+  <img src="https://private-user-images.githubusercontent.com/132138425/600066772-4c5ea1ad-112d-4ad7-a1f4-2965fd25c3c6.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODAyNDE2NTMsIm5iZiI6MTc4MDI0MTM1MywicGF0aCI6Ii8xMzIxMzg0MjUvNjAwMDY2NzcyLTRjNWVhMWFkLTExMmQtNGFkNy1hMWY0LTI5NjVmZDI1YzNjNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDUzMVQxNTI5MTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02YzgwYjQ5ZmMwNzEyYzRlMGQ5MzEzMGE5MDEzODZiOWQzMTBhYjRhMjQzYzYyM2EwNjZhN2U1NzJmNGMyMzliJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.t58a78A0mha0q8Il8iQVFN28QT5LvIz7DfoR7duY4BM" alt="Evil Scan Banner" width="600">
+</p>
+
+<p align="center">
   <strong>Advanced web security testing and exploitation framework</strong> for security professionals and penetration testers.
 </p>
 
@@ -317,7 +321,7 @@ Select an option:
 
 - **Options 2–13** execute each phase independently. You can launch them in any order; results accumulate in same session.
 - **Option 1** configures login once: afterwards, all phases reuse authenticated session (cookies and headers).
-- **Option 14 — Complete Pentesting:** automatically chains information → Nmap → Nuclei → vhost → directories → spidering → source code → injection → API → WordPress → brute force.
+- **Option 14 — Complete Pentesting:** automatically chains information → Nmap → Nuclei → vhost → directories → spidering → source code → injection → API → WordPress → brute force
 - **Options 15 and 16** only appear when scan data exists. Used to review results without re-scanning: **15** prints Markdown summary and **16** reprints tables
 
 ---

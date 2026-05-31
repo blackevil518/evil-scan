@@ -21,9 +21,6 @@
 
 ---
 
-<img width="2062" height="1258" alt="image" src="" />
-<img width="3440" height="1920" alt="image" src="" />
-
 ## 📋 Table of Contents
 
 - [Description](#-description)
@@ -59,10 +56,6 @@ Designed for bug bounty hunters and penetration testers, it automates common rec
 - 👤 User and email enumeration
 - 🔐 Brute force with **hydra** + CSRF-aware fallback and **automatic error message detection**
 - 📊 Reports in **TXT, JSON, Markdown and HTML** (SaaS dashboard with light/dark theme, exportable to PDF)
-
-## ☠️ Full Video Demo
-
-https://youtu.be/-zMs3HmNVvg
 
 ---
 
@@ -213,7 +206,7 @@ Dedicated module (menu option **13**) that orchestrates standard Kali AD tools. 
 ### 1️⃣ Quick Installation (Kali Linux)
 
 ```bash
-git clone https://github.com/evil-5188/evil-scan.git
+git clone https://github.com/blackevil518/evil-scan.git
 cd evil-scan
 
 # Create virtual environment (recommended)
@@ -294,10 +287,10 @@ python3 wstg-scan.py
  ╚══════╝  ╚═══╝  ╚═╝╚══════╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝
 
 Evil Scan - Web Security Framework
-developed by @evil_5188 - Telegram: @evil_5188
+Developed by @blackevil518 - Telegram: @blackevil518
 
 ====================================================
-  EVIL SCAN v2.0.0 - Evil Edition
+  EVIL SCAN v2.0.0 - BlackEvil Edition
 ====================================================
  1. Configure authentication (login)
  2. General information and enumeration
@@ -324,8 +317,8 @@ Select an option:
 
 - **Options 2–13** execute each phase independently. You can launch them in any order; results accumulate in same session.
 - **Option 1** configures login once: afterwards, all phases reuse authenticated session (cookies and headers).
-- **Option 14 — Complete Pentesting:** automatically chains information → Nmap → Nuclei → vhost → directories → spidering → source code → injection → API → WordPress → brute force. Active Directory module is optional and will prompt before execution. Shows all tables on completion and offers to save report.
-- **Options 15 and 16** only appear when scan data exists. Used to review results without re-scanning: **15** prints Markdown summary (ready to paste in GitBook/GitHub) and **16** reprints tables with visual format.
+- **Option 14 — Complete Pentesting:** automatically chains information → Nmap → Nuclei → vhost → directories → spidering → source code → injection → API → WordPress → brute force
+- **Options 15 and 16** only appear when scan data exists. Used to review results without re-scanning: **15** prints Markdown summary and **16** reprints tables
 
 ---
 
@@ -335,14 +328,12 @@ Reports are automatically generated in `reports/<host>/<host>.{txt,json,html,md}
 
 | Format | Content |
 |---|---|
-| `*.txt` | Plain summary + sections by category (general, vhost, spider, **source code analysis**, API, directories, credentials, findings, Nuclei) |
+| `*.txt` | Plain summary + sections by category (general, vhost, spider, source code analysis, API, directories, credentials, findings, Nuclei) |
 | `*.json` | Complete serialized data (ideal for integration with other tools) |
 | `*.html` | **SaaS Dashboard** in single file: light/dark theme, collapsible sidebar, table search and PDF export |
 | `*.md`  | Complete summary in **standard Markdown** — copy/paste directly in GitBook, GitHub or Obsidian |
 
 ### The HTML Dashboard
-
-<img width="3440" height="1920" alt="image" src="https://github.com/user-attachments/assets/4c5ea1ad-112d-4ad7-a1f4-2965fd25c3c6" />
 
 HTML report is a **professional SaaS-style interactive dashboard**:
 
@@ -351,7 +342,7 @@ HTML report is a **professional SaaS-style interactive dashboard**:
 - 🔎 **Live search** filtering all tables (host, port, CVE, hash…).
 - 📊 **Visual summary** with KPI cards (linked to sections) and risk gauge by severity.
 - 🖨️ **PDF export** optimized (light palette, margins and no page breaks).
-- 🧩 **Only sections with data are shown.** Available: Summary, General Info, Nmap and NSE, Findings, Nuclei, API, VHosts, Directories, Exposed Surface, WordPress, Spidering, Source Code, **Active Directory**, Credentials and complete JSON dump.
+- 🧩 **Only sections with data are shown.**
 
 ---
 
@@ -402,41 +393,10 @@ sudo apt install -y ffuf
 This is backend noise. The script filters `Could not unmarshal interaction data`. To disable Interactsh completely, edit the Nuclei call and add `-ni`.
 
 ### Brute force doesn't find certain credentials
-Hydra doesn't handle CSRF tokens or sessions; the script will detect pending users and fallback to internal method (CSRF-aware with `requests.Session`). If still not found, check account lockout or rate limiting on server.
+Hydra doesn't handle CSRF tokens or sessions; the script will detect pending users and fallback to internal method (CSRF-aware with `requests.Session`). If still not found, check account lockout or rate limiting.
 
 ### Spidering stops at few pages
 If you see `Exceeded N redirects`, target has long redirect chains. Increase `MAX_REDIRECTS` in script.
-
----
-
-## 📚 Useful Resources
-
-- [OWASP WSTG](https://owasp.org/www-project-web-security-testing-guide/) – Official guide
-- [OWASP API Security Top 10](https://owasp.org/API-Security/)
-- [Nuclei Templates](https://github.com/projectdiscovery/nuclei-templates)
-- [ffuf](https://github.com/ffuf/ffuf) – Web fuzzer
-- [hydra](https://github.com/vanhauser-thc/thc-hydra) – Brute force
-- [SecLists](https://github.com/danielmiessler/SecLists) – Pentesting lists
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. **Fork** the repository
-2. Create a branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push (`git push origin feature/AmazingFeature`)
-5. Open a **Pull Request**
-
-### Areas to Contribute
-- [ ] Official Docker image
-- [ ] PDF reports
-- [ ] Automated tests (pytest)
-- [ ] WebSocket / Server-Sent Events support
-- [ ] WAF detection plugins
-- [ ] GUI (TUI with Textual)
 
 ---
 
@@ -448,9 +408,9 @@ This project is under **MIT** license. See [LICENSE](LICENSE) for details.
 
 ## 👨‍💻 Author
 
-**@evil_5188** – Security Researcher | Penetration Tester
+**@blackevil518** – Security Researcher | Penetration Tester
 
-- 📱 Telegram: [@evil_5188](https://t.me/evil_5188)
+- 📱 Telegram: [@blackevil518](https://t.me/blackevil518)
 - 🔧 Evil Scan Framework Developer
 
 ---
@@ -476,11 +436,3 @@ Unauthorized access to computer systems is illegal."
 ⭐ If you find it useful, give it a star! ⭐
 
 </div>
-
----
-
-### Acknowledgments
-- [OWASP](https://owasp.org/) for WSTG guide and API Security Top 10
-- [ProjectDiscovery](https://github.com/projectdiscovery) for Nuclei
-- [Daniel Miessler](https://github.com/danielmiessler) for SecLists
-- [van Hauser](https://github.com/vanhauser-thc) for Hydra

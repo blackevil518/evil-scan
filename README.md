@@ -217,7 +217,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Run
-python3 wstg-scan.py
+python3 evil-scan.py
 ```
 
 ### 2️⃣ Installation with Optional Tools (recommended for maximum coverage)
@@ -243,7 +243,7 @@ nuclei -update-templates
 ### Interactive Mode
 
 ```bash
-python3 wstg-scan.py
+python3 evil-scan.py
 ```
 
 Will prompt for target URL and display main menu.
@@ -251,7 +251,7 @@ Will prompt for target URL and display main menu.
 ### CLI Arguments Mode
 
 ```bash
-python3 wstg-scan.py --url https://example.com --output report.html --threads 10 --timeout 15
+python3 evil-scan.py --url https://example.com --output report.html --threads 10 --timeout 15
 ```
 
 | Argument | Description |
@@ -268,7 +268,7 @@ python3 wstg-scan.py --url https://example.com --output report.html --threads 10
 ### Pre-Authentication
 
 ```bash
-python3 wstg-scan.py
+python3 evil-scan.py
 # Menu → 1. Configure authentication (login)
 # Enter username, password and login URL
 # Subsequent tests will use authenticated session
@@ -317,7 +317,7 @@ Select an option:
 
 - **Options 2–13** execute each phase independently. You can launch them in any order; results accumulate in same session.
 - **Option 1** configures login once: afterwards, all phases reuse authenticated session (cookies and headers).
-- **Option 14 — Complete Pentesting:** automatically chains information → Nmap → Nuclei → vhost → directories → spidering → source code → injection → API → WordPress → brute force
+- **Option 14 — Complete Pentesting:** automatically chains information → Nmap → Nuclei → vhost → directories → spidering → source code → injection → API → WordPress → brute force.
 - **Options 15 and 16** only appear when scan data exists. Used to review results without re-scanning: **15** prints Markdown summary and **16** reprints tables
 
 ---
@@ -350,7 +350,7 @@ HTML report is a **professional SaaS-style interactive dashboard**:
 
 ### Customize Wordlists
 
-Edit constants in `wstg-scan.py`:
+Edit constants in `evil-scan.py`:
 
 ```python
 SECLISTS_SMALL     = "/usr/share/seclists/Discovery/Web-Content/raft-small-directories.txt"
@@ -372,7 +372,7 @@ REQUEST_DELAY   = 0.0  # delay between requests
 ```bash
 export HTTP_PROXY=http://127.0.0.1:8080
 export HTTPS_PROXY=http://127.0.0.1:8080
-python3 wstg-scan.py
+python3 evil-scan.py
 ```
 
 ---
